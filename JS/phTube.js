@@ -35,9 +35,9 @@ const loadCategory = async () => {
 
 
 // Load All Video function
-const loadAllVideo = async () => {
+const loadAllVideo = async (searchInpt = "") => {
     try {
-        const res = await fetch('https://openapi.programming-hero.com/api/phero-tube/videos');
+        const res = await fetch(`https://openapi.programming-hero.com/api/phero-tube/videos?title=${searchInpt}`);
         if (!res.ok) throw new Error('Network response was not ok');
         const data = await res.json();
         display(data.videos);
@@ -182,7 +182,11 @@ const display = (videos) => {
         displayVideos.append(div);
     });
 }
-
+// Search Function
+document.getElementById('searchInpt').addEventListener("keyup", (e)=>{
+    loadAllVideo(e.target.value);
+    
+})
 // Globally function call
 loadCategory();
 loadAllVideo();
