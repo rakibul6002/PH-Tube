@@ -33,7 +33,6 @@ const loadCategory = async () => {
     };
 };
 
-
 // Load All Video function
 const loadAllVideo = async (searchInpt = "") => {
     try {
