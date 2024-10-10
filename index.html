@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,6 +56,22 @@
             <!-- Video content section -->
             <section class="max-w-screen-xl mx-auto my-5">
                 <div id="displayVideo" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-2"></div>
+            </section>
+            <section>
+                    <button class="btn hidden" onclick="customModal.showModal()">open modal</button>
+                        <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+                            <div class="modal-box">
+                                <div id="modalcontent">
+
+                                </div>
+                                <div class="modal-action">
+                                <form method="dialog" class="w-full">
+                                    <!-- if there is a button in form, it will close the modal -->
+                                    <button class="btn w-full ">Close</button>
+                                </form>
+                                </div>
+                            </div>
+                        </dialog>
             </section>
         </main>
 
